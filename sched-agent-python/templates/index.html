@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>HPC4Asia Platform</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="Free HTML Templates" name="keywords">
+    <meta content="Free HTML Templates" name="description">
+
+    <!-- Favicon -->
+    <link href="{{ url_for('static',filename='img/favicon.ico') }}" rel="icon">
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Jost:wght@500;600;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">  
+
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+
+    <link href="{{ url_for('static', filename='lib/owlcarousel/assets/owl.carousel.min.css')}}" rel="stylesheet">
+
+    <link href="{{ url_for('static', filename='styles/style.css') }}" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+    <!-- Topbar Start -->
+    <div class="container-fluid bg-dark">
+        <div class="row py-2 px-lg-5">
+            <div class="col-lg-6 text-center text-lg-left mb-2 mb-lg-0">
+                <div class="d-inline-flex align-items-center text-white">
+                    <small><i class="fa fa-phone-alt mr-2"></i>+82-01-5108-5786</small>
+                    <small class="px-3">|</small>
+                    <small><i class="fa fa-envelope mr-2"></i>asif@kisti.re.kr</small>
+                </div>
+            </div>
+            <div class="col-lg-6 text-center text-lg-right">
+                <div class="d-inline-flex align-items-center">
+                    <a class="text-white px-2" href="">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+                    <a class="text-white px-2" href="">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                    <a class="text-white px-2" href="">
+                        <i class="fab fa-linkedin-in"></i>
+                    </a>
+                    <a class="text-white px-2" href="">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a class="text-white pl-2" href="">
+                        <i class="fab fa-youtube"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Topbar End -->
+
+
+    <!-- Navbar Start -->
+    <div class="container-fluid p-0">
+        <nav class="navbar navbar-expand-lg bg-white navbar-light py-3 py-lg-0 px-lg-5">
+            <a href="index.html" class="navbar-brand ml-lg-3">
+                <h1 class="m-0 text-uppercase text-primary"><i class="fa fa-book-reader mr-3"></i>HPC4Asia</h1>
+            </a>
+            <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+        </nav>
+    </div>
+    <!-- Navbar End -->
+
+
+
+    <div>
+        <div class="row justify-content-center bg-image mx-0 mb-5">
+            <div class="col-lg-6 py-5">
+                <div class="bg-white p-5 my-5">
+                    <h1 class="text-center mb-4">Enter and submit new Pods requests</h1>
+                    <form onsubmit="test(event)">
+                        <div class="form-row justify-content-center">
+                            <div class="col-sm-6">
+                                <div class="form-group">
+                                    <input type="text" class="form-control bg-light border-0" placeholder="Pod Name" style="padding: 30px 20px;" id="podname">
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="form-row justify-content-center">
+                            <div class="col-sm-6">
+                                <div class="form-group">
+                                    <input type="text" class="form-control bg-light border-0" placeholder="Custom Image" style="padding: 30px 20px;" id="image">
+                                </div>
+                            </div>
+                        </div>
+
+                       <div class="form-row justify-content-center">
+                            <div class="col-sm-6">
+                                <div class="form-group">
+                                    <input type="text" class="form-control bg-light border-0" placeholder="RAM(MB) request" style="padding: 30px 20px;" id="memory">
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="form-row justify-content-center">
+                            <div class="col-sm-6">
+                                <div class="form-group">
+                                    <select class="custom-select bg-light border-0 px-3" style="height: 60px;" id="cpus">
+                                        <option selected>Requested CPUs</option>
+                                        <option value="1">1</option>
+                                        <option value="2">2</option>
+                                        <option value="3">3</option>
+                                        <option value="3">4</option>
+                                        <option value="3">5</option>
+                                        <option value="3">6</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <div class="form-row justify-content-center">
+                            <div class="col-sm-6">
+                                <div class="form-group">
+                                    <select class="custom-select bg-light border-0 px-3" style="height: 60px;" id="gpus">
+                                        <option selected>Requested GPUs</option>
+                                        <option value="1">0</option>
+                                        <option value="2">1</option>
+                                        <option value="2">2</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <div class="form-row justify-content-center">
+                            <div class="col-sm-6">                       
+                                <button class="btn btn-primary btn-block" type="submit" style="height: 60px;" id="btn">Submit</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>  
+    <!-- Courses End -->
+
+
+
+
+    <!-- Back to Top -->
+    <a href="#" class="btn btn-lg btn-primary rounded-0 btn-lg-square back-to-top"><i class="fa fa-angle-double-up"></i></a>
+
+
+    <script>
+       function test(e) {
+          console.log(e);
+          e.preventDefault();
+          var podname = document.getElementById('podname').value
+          var image = document.getElementById('image').value
+          var mem = document.getElementById('memory').value
+          var cpus = document.getElementById('cpus').value
+          var gpus = document.getElementById('gpus').value
+   
+          fetch("http://210.119.122.231:5000/usage", { 
+             
+              method:'POST',
+              body:JSON.stringify({
+                  name:podname,
+                  image:image,
+                  cpus:cpus,
+                  gpus:gpus,
+                  memory:mem,
+                  nodes:"1",
+                  
+                 
+              }),
+              headers:{
+                  "Content-Type":"application/json; charset=UTF-8"
+              }
+
+          })
+          .then(function(response){
+              return response.json()
+          })
+          .then(function(data){
+              console.log(data)
+          })
+       }
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,55 @@
+apiVersion: "kubeflow.org/v1"
+kind: "TFJob"
+metadata:
+  name: "dist-mnist-for-e2e-test"
+spec:
+  tfReplicaSpecs:
+    PS:
+      replicas: 1
+      restartPolicy: Never
+      template:
+        spec:
+          containers:
+            - name: tensorflow
+              image: asifraza/tf-dist-mnist-testing:latest # asifraza/tensorflow-testing:latest
+              #resources:
+              #  limits:
+              #    nvidia.com/gpu: 1 # requesting 1 GPU
+              resources:
+                requests:
+                  cpu: 2
+                  memory: 1024Mi
+          nodeSelector:
+            kubernetes.io/hostname: asia-ceph-node
+
+    Worker:
+      replicas: 2 
+      restartPolicy: Never
+      template:
+        spec:
+          containers:
+            - name: tensorflow
+              image: asifraza/tf-dist-mnist-testing:latest  #asifraza/tensorflow-testing:latest
+              resources:
+                requests:
+                  cpu: 2
+                  memory: 1024Mi
+              #resources:
+              #  limits:
+              #    nvidia.com/gpu: 1 # requesting 1 GPU
+          affinity:
+            nodeAffinity:
+              requiredDuringSchedulingIgnoredDuringExecution:
+                nodeSelectorTerms:
+                - matchExpressions:
+                  - key: kubernetes.io/hostname
+                    operator: In
+                    values:
+                    - pakistan-node
+                    - malaysia-node
+          #nodeSelector:
+          #  kubernetes.io/hostname: pakistan-node
+          #  kubernetes.io/hostname: asia-ceph-node
+
+
+

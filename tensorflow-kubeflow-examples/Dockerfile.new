@@ -1,0 +1,11 @@
+FROM tensorflow/tensorflow:2.5.0-gpu
+
+ADD . /var/tf_dist_mnist
+ENTRYPOINT ["python", "/var/tf_dist_mnist/dist_mnist.py"]
+
+#ADD mnist-mwms.py /opt/mnist-mwms.py
+#RUN chmod +x /opt/mnist-mwms.py
+#RUN pip install tensorflow-datasets
+
+#ENTRYPOINT ["/usr/bin/python"]
+#CMD ["/opt/mnist-mwms.py"]

@@ -1,0 +1,44 @@
+apiVersion: apps/v1
+kind: DaemonSet
+metadata:
+  name: perfsonar-maddash
+spec:
+  selector:
+    matchLabels:
+      name: perfsonar-maddash
+  template:
+    metadata:
+      labels:
+        name: perfsonar-maddash
+    spec:
+      hostNetwork: true
+      containers:
+      - name: perfsonar
+        image: asifraza/hpc-perfsonar:latest 
+        #image: perfsonar/testpoint:systemd
+        #command: ["/bin/sh", "-c"]
+        #args:
+        #  - echo starting;
+        #    psconfig remote add --configure-archives http://134.75.115.137/psconfig/test.json;
+        #    tail -f /dev/null;            
+        volumeMounts:
+        - name: cgroup
+          mountPath: /sys/fs/cgroup
+          readOnly: true
+        - mountPath: /tmp
+          name: tmp
+          subPath: tmp
+        - mountPath: /run
+          name: tmp
+          subPath: run
+      restartPolicy: Always
+      volumes:
+      - name: cgroup
+        hostPath:
+          path: /sys/fs/cgroup
+          type: Directory
+      - emptyDir:
+          medium: Memory
+          sizeLimit: 128Mi
+        name: tmp
+

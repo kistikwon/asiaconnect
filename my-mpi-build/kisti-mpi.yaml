@@ -1,0 +1,31 @@
+apiVersion: kubeflow.org/v2beta1
+kind: MPIJob
+metadata:
+  name: kisti-mpi
+spec:
+  slotsPerWorker: 1
+  runPolicy:
+    cleanPodPolicy: Running
+  mpiReplicaSpecs:
+    Launcher:
+      replicas: 1
+      template:
+         spec:
+           containers:
+           - image: asifraza/byounghyun:latest
+             imagePullPolicy: Always
+             name: kisti-mpi
+             command: ['sh', '-c', 'mpirun --allow-run-as-root -n 2 python example2.py']
+
+    Worker:
+      replicas: 2
+      template:
+        spec:
+          containers:
+          - image: asifraza/byounghyun:latest
+            imagePullPolicy: Always
+            name: kisti-mpi
+            resources:
+              limits:
+                cpu: 2
+                memory: "2048Mi"
