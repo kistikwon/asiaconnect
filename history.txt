@@ -1,0 +1,1000 @@
+   49  vim templates/index.html 
+   50  python3.7 flask_api.py 
+   51  vim templates/index.html 
+   52  python3.7 flask_api.py 
+   53  vim templates/index.html 
+   54  python3.7 flask_api.py 
+   55  vim templates/index.html 
+   56  python3.7 flask_api.py 
+   57  vim templates/index.html 
+   58  python3.7 flask_api.py 
+   59  vim templates/index.html 
+   60  pwd
+   61  vim templates/index.html 
+   62  python3.7 flask_api.py 
+   63  cd templates/
+   64  ls
+   65  cd css/
+   66  ls
+   67  cd ..
+   68  ls
+   69  vim index.html 
+   70  cd ..
+   71  ls
+   72  vim flask_api.py 
+   73  vim templates/index.html 
+   74  python3.7 flask_api.py 
+   75  ls
+   76  vim templates/index.html 
+   77  cd templates/
+   78  ls
+   79  mkdir static
+   80  mv -R img/ static/
+   81  mv img/ static/
+   82  cd static/
+   83  ls
+   84  cd img/
+   85  ls
+   86  cd ..
+   87  ls
+   88  cd ..
+   89  python3.7 flask_api.py 
+   90  cd templates/ls
+   91  cd templates/
+   92  ls
+   93  mv css static/
+   94  vim index.html 
+   95  cd ..
+   96  python3.7 flask_api.py 
+   97  vim templates/index.html 
+   98  python3.7 flask_api.py 
+   99  vim templates/index.html 
+  100  cd templates/ind
+  101  ls
+  102  mv css/ styles/
+  103  ls
+  104  cd ..
+  105  python3.7 flask_api.py 
+  106  vim templates/index.html 
+  107  python3.7 flask_api.py 
+  108  vim flask_api.py 
+  109  python3.7 flask_api.py 
+  110  vim flask_api.py 
+  111  vim templates/index.html 
+  112  python3.7 flask_api.py 
+  113  vim templates/index.html 
+  114  python3.7 flask_api.py 
+  115  vim templates/index.html 
+  116  python3.7 flask_api.py 
+  117  ls
+  118  vim flask_api.py 
+  119  cd templates/
+  120  ls
+  121  cd static/
+  122  ls
+  123  cd styles/
+  124  ls
+  125  cd ..
+  126  d ..
+  127  cd ..
+  128  ls
+  129  vim index.html 
+  130  cd ..
+  131  python3.7 flask_api.py 
+  132  cd ..
+  133  cd sched-agent-python/
+  134  ls
+  135  cd templates/
+  136  ls
+  137  mv lib static/
+  138  mv js static/
+  139  mv scss/ static/
+  140  clear
+  141  cd ..
+  142  vim templates/index.html 
+  143  python3.7 flask_api.py 
+  144  vim templates/index.html 
+  145  python3.7 flask_api.py 
+  146  vim templates/index.html 
+  147  python3.7 flask_api.py 
+  148  vim templates/index.html 
+  149  python3.7 flask_api.py 
+  150  vim templates/index.html 
+  151  python3.7 flask_api.py 
+  152  vim templates/index.html 
+  153  python3.7 flask_api.py 
+  154  clear
+  155  ls
+  156  cd asif/
+  157  w
+  158  tty
+  159  clear
+  160  w
+  161  clear
+  162  ls
+  163  cd sched-agent-python/
+  164  ls
+  165  clear
+  166  ls
+  167  ps aux |grep flask
+  168  clear
+  169  ls
+  170  vim usage.py 
+  171  clear
+  172  python3.7 flask_api.py 
+  173  vim templates/index.html 
+  174  python3.7 flask_api.py 
+  175  vim templates/index.html 
+  176  python3.7 flask_api.py 
+  177  vim templates/index.html 
+  178  python3.7 flask_api.py 
+  179  vim templates/index.html 
+  180  python3.7 flask_api.py 
+  181  vim templates/index.html 
+  182  python3.7 flask_api.py 
+  183  vim templates/index.html 
+  184  python3.7 flask_api.py 
+  185  vim templates/index.html 
+  186  python3.7 flask_api.py 
+  187  vim templates/index.html 
+  188  python3.7 flask_api.py 
+  189  vim templates/index.html 
+  190  python3.7 flask_api.py 
+  191  vim templates/index.html 
+  192  python3.7 flask_api.py 
+  193  vim templates/index.html 
+  194  python3.7 flask_api.py 
+  195  vim templates/index.html 
+  196  python3.7 flask_api.py 
+  197  vim templates/index.html 
+  198  python3.7 flask_api.py 
+  199  vim templates/index.html 
+  200  python3.7 flask_api.py 
+  201  vim templates/index.html 
+  202  python3.7 flask_api.py 
+  203  vim templates/index.html 
+  204  python3.7 flask_api.py 
+  205  vim templates/index.html 
+  206  python3.7 flask_api.py 
+  207  vim templates/index.html 
+  208  python3.7 flask_api.py 
+  209  vim templates/index.html 
+  210  python3.7 flask_api.py 
+  211  vim templates/index.html 
+  212  python3.7 flask_api.py 
+  213  vim templates/index.html 
+  214  python3.7 flask_api.py 
+  215  vim templates/index.html 
+  216  vim templates/static/js/main.js 
+  217  vim templates/index.html 
+  218  python3.7 flask_api.py 
+  219  vim templates/index.html 
+  220  python3.7 flask_api.py 
+  221  vim templates/index.html 
+  222  python3.7 flask_api.py 
+  223  vim templates/index.html 
+  224  python3.7 flask_api.py 
+  225  vim templates/index.html 
+  226  python3.7 flask_api.py 
+  227  history |grep curl
+  228  vim templates/index.html 
+  229  history |grep curl
+  230  vim templates/index.html 
+  231  python3.7 flask_api.py 
+  232  vim templates/index.html 
+  233  python3.7 flask_api.py 
+  234  vim templates/index.html 
+  235  python3.7 flask_api.py 
+  236  vim templates/index.html 
+  237  python3.7 flask_api.py &
+  238  history |grep curl
+  239  curl -X GET -H "Content-Type: application/json" -d '{"cpus":"2","gpus":"1","memory":"1024","nodes":"1"}' http://127.0.0.1:5000/usage
+  240  ps aux |grep flask
+  241  kill -9 245464
+  242  vim templates/index.html 
+  243  python3.7 flask_api.py &
+  244  ps aux |grep flask
+  245  kill -9 255986
+  246  clear
+  247  vim templates/index.html 
+  248  python3.7 flask_api.py
+  249  vim flask_api.py 
+  250  vim templates/index.html 
+  251  python3.7 flask_api.py
+  252  vim templates/index.html 
+  253  python3.7 flask_api.py
+  254  vim templates/index.html 
+  255  python3.7 flask_api.py
+  256  vim templates/index.html 
+  257  history |grep curl
+  258  vim templates/index.html 
+  259  python3.7 flask_api.py
+  260  vim templates/index.html 
+  261  python3.7 flask_api.py
+  262  vim templates/index.html 
+  263  python3.7 flask_api.py
+  264  vim flask_api.py 
+  265  python3.7 flask_api.py
+  266  vim templates/index.html 
+  267  python3.7 flask_api.py
+  268  python3.7 flask_api.py &
+  269  history |grep curl
+  270  curl -X GET  http://127.0.0.1:5000/usage
+  271  curl  http://127.0.0.1:5000/usage
+  272  ps aux |grep flask
+  273  kill -9 284307
+  274  vim flask_api.py 
+  275  python3.7 flask_api.py &
+  276  curl  http://127.0.0.1:5000/usage
+  277  curl  http://127.0.0.1:5000/usage?
+  278  curl -X GET  http://127.0.0.1:5000/usage
+  279  history |grep curl
+  280  curl -X GET -H "Content-Type: application/json" -d '{"cpus":"2","gpus":"1","memory":"1024","nodes":"1"}' http://127.0.0.1:5000/usage
+  281  curl -X GET -H "Content-Type: application/json" -d http://127.0.0.1:5000/usage
+  282  curl -X GET -H "Content-Type: application/json" http://127.0.0.1:5000/usage
+  283  vim flask_api.py 
+  284  ps aux |grep flask
+  285  kill -9 287950
+  286  clear
+  287  python3.7 flask_api.py 
+  288  python3.7 flask_api.py &
+  289  history 
+  290  curl -X POST -H "Content-Type: application/json" -d '{"cpus":"2","gpus":"1","memory":"1024","nodes":"1"}' http://127.0.0.1:5000/usage
+  291  ps aux |grep flask
+  292  kill -9 291390
+  293  vim templates/index.html 
+  294  python3.7 flask_api.py 
+  295  vim templates/index.html 
+  296  python3.7 flask_api.py 
+  297  vim templates/index.html 
+  298  python3.7 flask_api.py 
+  299  vim templates/index.html 
+  300  python3.7 flask_api.py 
+  301  vim templates/index.html 
+  302  python3.7 flask_api.py 
+  303  vim templates/index.html 
+  304  python3.7 flask_api.py 
+  305  vim templates/index.html 
+  306  python3.7 flask_api.py 
+  307  vim templates/index.html 
+  308  python3.7 flask_api.py 
+  309  vim templates/index.html 
+  310  python3.7 flask_api.py 
+  311  vim templates/index.html 
+  312  python3.7 flask_api.py 
+  313  vim templates/index.html 
+  314  python3.7 flask_api.py 
+  315  vim templates/index.html 
+  316  history 
+  317  exit
+  318  clear
+  319  cd asif/
+  320  ls
+  321  cd sched-agent-python/
+  322  ls
+  323  clear
+  324  ls
+  325  clear
+  326  ls
+  327  vim templates/index.html 
+  328  history 
+  329  python3.7 flask_api.py 
+  330  vim templates/index.html 
+  331  python3.7 flask_api.py 
+  332  vim templates/index.html 
+  333  python3.7 flask_api.py 
+  334  vim templates/index.html 
+  335  python3.7 flask_api.py 
+  336  vim templates/index.html 
+  337  python3.7 flask_api.py 
+  338  vim templates/index.html 
+  339  python3.7 flask_api.py 
+  340  vim templates/index.html 
+  341  python3.7 flask_api.py 
+  342  vim templates/index.html 
+  343  python3.7 flask_api.py 
+  344  vim templates/index.html 
+  345  python3.7 flask_api.py 
+  346  vim templates/index.html 
+  347  history |grep curl
+  348  python3.7 flask_api.py 
+  349  python3.7 flask_api.py &
+  350  curl -X POST -H "Content-Type: application/json" -d '{"cpus":"2","gpus":"1","memory":"1024","nodes":"1"}' http://127.0.0.1:5000/usage
+  351  ps aux |grep flask
+  352  kill -9 121385
+  353  vim flask_api.py 
+  354  vim templates/index.html 
+  355  python3.7 flask_api.py
+  356  vim templates/index.html 
+  357  python3.7 flask_api.py
+  358  vim templates/index.html 
+  359  python3.7 flask_api.py
+  360  vim templates/index.html 
+  361  python3.7 flask_api.py
+  362  vim templates/index.html 
+  363  python3.7 flask_api.py
+  364  vim templates/index.html 
+  365  python3.7 flask_api.py
+  366  vim templates/index.html 
+  367  python3.7 flask_api.py
+  368  clear
+  369  ls
+  370  vim python-kubctl/example-pods.py 
+  371  clear
+  372  ls
+  373  cp python-kubctl/example-pods.py .
+  374  ls
+  375  vim example-pods.py 
+  376  clear
+  377  vim usage_old.py 
+  378  ls
+  379  mv example-pods.py createpods.py
+  380  vim usage_old.py 
+  381  python3.7 usage_old.py 
+  382  kubectl get pods
+  383  vim createpods.py 
+  384  vim usage_old.py 
+  385  vim python-kubctl/example-pods.py 
+  386  vim usage_old.py 
+  387  vim createpods.py 
+  388  python3.7 usage_old.py 
+  389  vim createpods.py 
+  390  vim usage_old.py 
+  391  vim createpods.py 
+  392  python3.7 usage_old.py 
+  393  vim createpods.py 
+  394  vim python-kubctl/example-pods.py 
+  395  vim createpods.py 
+  396  vim python-kubctl/example-pods.py 
+  397  vim createpods.py 
+  398  vim usage_old.py 
+  399  vim createpods.py 
+  400  vim usage_old.py 
+  401  python3.7 usage_old.py 
+  402  kubectl get pods
+  403  kubectl delete pod busybox-test
+  404  vim usage
+  405  vim usage_old.py 
+  406  vim createpods.py 
+  407  python3.7 usage_old.py 
+  408  kubectl delete pod busybox-test
+  409  vim createpods.py 
+  410  python3.7 usage_old.py 
+  411  cat ../tensorflow-kubeflow-examples/tf_job_mnist.yaml 
+  412  kubectl get nodes --show-labels
+  413  kubectl delete pod busybox-test
+  414  vim createpods.py 
+  415  clear
+  416  python3.7 usage_old.py 
+  417  vim createpods.py 
+  418  cat ../tensorflow-kubeflow-examples/tf_job_mnist.yaml 
+  419  vim ../tensorflow-kubeflow-examples/tf_job_mnist.yaml 
+  420  vim createpods.py 
+  421  python3.7 usage_old.py 
+  422  kubectl get pods
+  423  python3.7 usage_old.py 
+  424  vim createpods.py 
+  425  python3.7 usage_old.py 
+  426  vim createpods.py 
+  427  python3.7 usage_old.py 
+  428  vim createpods.py 
+  429  python3.7 usage_old.py 
+  430  vim createpods.py 
+  431  python3.7 usage_old.py 
+  432  kubectl get pods
+  433  kubectl get pods --show-all
+  434  kubectl get pods --show-labels
+  435  kubectl get pods --show-nodes
+  436  kubectl get pods --show-node
+  437  kubectl get pods -o wide
+  438  kubectl delete busybox-test
+  439  kubectl delete pod busybox-test
+  440  python3.7 usage_old.py 
+  441  kubectl delete pod busybox-test
+  442  python3.7 usage_old.py 
+  443  kubectl get pods -o wide
+  444  kubectl delete pod busybox-test
+  445  clear
+  446  vim createpods.py 
+  447  kubectl get nodes
+  448  vim createpods.py 
+  449  python3.7 usage_old.py 
+  450  kubectl get pods -o wide
+  451  vim createpods.py 
+  452  python3.7 usage_old.py 
+  453  kubectl get pods -o wide
+  454  vim createpods.py 
+  455  python3.7 usage_old.py 
+  456  kubectl get pods -o wide
+  457  vim createpods.py 
+  458  kubectl get pods -o wide
+  459  python3.7 usage_old.py 
+  460  kubectl get pods -o wide
+  461  vim createpods.py 
+  462  python3.7 usage_old.py 
+  463  kubectl get pods -o wide
+  464  kubectl delete pods busybox-test && kubectl delete pods busybox-test1 && kubectl delete pods busybox-test2 && kubectl delete pods busybox-test3 && kubectl delete pods busybox-test4
+  465  kubectl get pods -o wide
+  466  clear
+  467  python3.7 usage_old.py 
+  468  kubectl get pods -o wide
+  469  vim createpods.py 
+  470  python3.7 usage_old.py 
+  471  kubectl get pods -o wide
+  472  kubectl delete pods busybox-test
+  473  kubectl delete pods busybox-test4
+  474  vim createpods.py 
+  475  kubectl get nodes --all-labels
+  476  kubectl get nodes --show-labels
+  477  vim createpods.py 
+  478  python3.7 usage_old.py 
+  479  vim createpods.py 
+  480  cd ..
+  481  ls
+  482  vim gpu-test.yaml 
+  483  ls
+  484  cd tensorflow-kubeflow-examples/
+  485  ls
+  486  vim tf_job_mnist.yaml 
+  487  kubectl apply -f ../tensorflow-kubeflow-examples/tf_job_mnist.yaml 
+  488  kubectl get pods
+  489  kubectl get pods -o wide
+  490  kubectl delete -f ../tensorflow-kubeflow-examples/tf_job_mnist.yaml 
+  491  kubectl get pods -o wide
+  492  vim ../tensorflow-kubeflow-examples/tf_job_mnist.yaml 
+  493  clear
+  494  kubectl apply -f ../tensorflow-kubeflow-examples/tf_job_mnist.yaml 
+  495  kubectl get pods -o wide
+  496  kubectl delete -f ../tensorflow-kubeflow-examples/tf_job_mnist.yaml 
+  497  vim ../tensorflow-kubeflow-examples/tf_job_mnist.yaml 
+  498  kubectl apply -f ../tensorflow-kubeflow-examples/tf_job_mnist.yaml 
+  499  vim ../tensorflow-kubeflow-examples/tf_job_mnist.yaml 
+  500  kubectl apply -f ../tensorflow-kubeflow-examples/tf_job_mnist.yaml 
+  501  kubectl get pods -o wide
+  502  kubectl delete -f ../tensorflow-kubeflow-examples/tf_job_mnist.yaml 
+  503  vim ../tensorflow-kubeflow-examples/tf_job_mnist.yaml 
+  504  kubectl get pods -o wide
+  505  kubectl apply -f ../tensorflow-kubeflow-examples/tf_job_mnist.yaml 
+  506  kubectl get pods -o wide
+  507  kubectl delete -f ../tensorflow-kubeflow-examples/tf_job_mnist.yaml 
+  508  vim ../tensorflow-kubeflow-examples/tf_job_mnist.yaml 
+  509  kubectl get pods -o wide
+  510  clear
+  511  kubectl apply -f ../tensorflow-kubeflow-examples/tf_job_mnist.yaml 
+  512  kubectl get pods -o wide
+  513  kubectl delete -f ../tensorflow-kubeflow-examples/tf_job_mnist.yaml 
+  514  vim ../tensorflow-kubeflow-examples/tf_job_mnist.yaml 
+  515  cd ..
+  516  ls
+  517  cd sched-agent-python/
+  518  ls
+  519  vim createpods.py 
+  520  vim ../tensorflow-kubeflow-examples/tf_job_mnist.yaml 
+  521  vim createpods.py 
+  522  vim ../tensorflow-kubeflow-examples/tf_job_mnist.yaml 
+  523  vim createpods.py 
+  524  python3.7 usage_old.py 
+  525  kubec get pods
+  526  kubectl get pods
+  527  kubectl get pods -o wide
+  528  vim createpods.py 
+  529  kubectl delete pod busybox-test
+  530  vim createpods.py 
+  531  python3.7 usage_old.py 
+  532  kubectl get pods -o wide
+  533  vim createpods.py 
+  534  python3.7 usage_old.py 
+  535  kubectl get pods -o wide
+  536  vim createpods.py 
+  537  python3.7 usage_old.py 
+  538  kubectl get pods -o wide
+  539  kubectl delete pod busybox-test
+  540  kubectl delete pod busybox-test1
+  541  kubectl delete pod busybox-test2
+  542  vim createpods.py 
+  543  python3.7 usage_old.py 
+  544  kubectl get pods -o wide
+  545  python3.7 usage_old.py 
+  546  kubectl get pods -o wide
+  547  vim createpods.py 
+  548  python3.7 usage_old.py 
+  549  kubectl get pods -o wide
+  550  kubectl delete pod busybox-test
+  551  kubectl delete pod busybox-test1
+  552  vim createpods.py 
+  553  python3.7 usage_old.py 
+  554  kubectl get pods -o wide
+  555  vim createpods.py 
+  556  python3.7 usage_old.py 
+  557  clear
+  558  history |grep labels
+  559  clear
+  560  his
+  561  clear
+  562  exit
+  563  kubectl get pods -o wide
+  564  w
+  565  pst
+  566  kubectl delete pod busybox-test
+  567  kubectl delete pod busybox-test1
+  568  kubectl get pods -o wide
+  569  clear
+  570  cd asif/sched-agent-python/
+  571  ls
+  572  vim createpods.py 
+  573  python3.7 usage_old.py 
+  574  vim createpods.py 
+  575  python3.7 usage_old.py 
+  576  kubectl get pods -o wide
+  577  vim createpods.py 
+  578  python3.7 usage_old.py 
+  579  kubectl get pods -o wide
+  580  kubectl delete pod busybox-test
+  581  kubectl delete pod busybox-test1
+  582  vim createpods.py 
+  583  vim usage_old.py 
+  584  vim createpods.py 
+  585  vim usage_old.py 
+  586  vim createpods.py 
+  587  python3.7 usage_old.py 
+  588  vim createpods.py 
+  589  python3.7 usage_old.py 
+  590  vim createpods.py 
+  591  python3.7 usage_old.py 
+  592  vim createpods.py 
+  593  python3.7 usage_old.py 
+  594  vim createpods.py 
+  595  vim usage_old.py 
+  596  vim createpods.py 
+  597  python3.7 usage_old.py 
+  598  vim createpods.py 
+  599  python3.7 usage_old.py 
+  600  vim createpods.py 
+  601  python3.7 usage_old.py 
+  602  vim createpods.py 
+  603  python3.7 usage_old.py 
+  604  vim createpods.py 
+  605  python3.7 usage_old.py 
+  606  vim createpods.py 
+  607  python3.7 usage_old.py 
+  608  vim createpods.py 
+  609  python3.7 usage_old.py 
+  610  vim createpods.py 
+  611  vim usage_old.py 
+  612  python3.7 usage_old.py 
+  613  vim createpods.py 
+  614  python3.7 usage_old.py 
+  615  kubectl get pods -o wide
+  616  kubectl delete pod testing-name
+  617  clear
+  618  vim createpods.py 
+  619  history |grep labels
+  620  history |grep curl
+  621  clear
+  622  kubectl get nodes
+  623  kubectl label nodes pakistan-node zone=kisti
+  624  kubectl label nodes pakistan-node zone=kisti --overwrite
+  625  clear
+  626  python3.7 usage_old.py 
+  627  kubectl get pods -o wide
+  628  vim usage_old.py 
+  629  kubectl get pods -o wide
+  630  python3.7 usage_old.py 
+  631  kubectl get pods -o wide
+  632  vim usage_old.py 
+  633  python3.7 usage_old.py 
+  634  kubectl get pods -o wide
+  635  kubectl delete pod test-name
+  636  kubectl delete pod test-name1
+  637  kubectl delete pod testing-name
+  638  vim usage_old.py 
+  639  python3.7 usage_old.py 
+  640  kubectl get pods -o wide
+  641  kubectl delete pod test-name
+  642  vim getnodes.py 
+  643  vim createpods.py 
+  644  python3.7 usage_old.py 
+  645  vim usage_old.py 
+  646  python3.7 usage_old.py 
+  647  vim getnodes.py 
+  648  python3.7 usage_old.py 
+  649  vim getnodes.py 
+  650  python3.7 usage_old.py 
+  651  vim getnodes.py 
+  652  python3.7 usage_old.py 
+  653  vim getnodes.py 
+  654  python3.7 usage_old.py 
+  655  vim getnodes.py 
+  656  vim usage_old.py 
+  657  vim getnodes.py 
+  658  vim usage_old.py 
+  659  vim createpods.py 
+  660  python3.7 usage_old.py 
+  661  kubectl get pods
+  662  kubectl get pods -o wide
+  663  vim usage_old.py 
+  664  python3.7 usage_old.py 
+  665  kubectl get pods -o wide
+  666  vim usage_old.py 
+  667  python3.7 usage_old.py 
+  668  kubectl get pods -o wide
+  669  vim createpods.py 
+  670  vim getnodes.py 
+  671  vim usage_old.py 
+  672  vim createpods.py 
+  673  vim usage_old.py 
+  674  python3.7 usage_old.py 
+  675  vim usage_old.py 
+  676  python3.7 usage_old.py 
+  677  vim usage_old.py 
+  678  vim createpods.py 
+  679  vim usage_old.py 
+  680  python3.7 usage_old.py 
+  681  vim usage_old.py 
+  682  vim createpods.py 
+  683  python3.7 usage_old.py 
+  684  kubectl get pods -o wide
+  685  vim usage_old.py 
+  686  python3.7 usage_old.py 
+  687  kubectl get pods -o wide
+  688  kubectl delete pod test-name && kubectl delete pod test-name1 && kubectl delete pod test-name2 && kubectl delete pod test-name3 && kubectl delete pod test-name4
+  689  clear
+  690  vim usage.py 
+  691  vim flask_api.py 
+  692  vim usage.py 
+  693  vim usage_old.py 
+  694  vim createpods.py 
+  695  python3.7 usage_old.py 
+  696  vim flask_api.py 
+  697  vim usage.py 
+  698  vim usage_old.py 
+  699  vim usage.py 
+  700  vim usage_old.py 
+  701  vim usage.py 
+  702  vim createpods.py 
+  703  vim usage.py 
+  704  vim createpods.py 
+  705  python3.7 usage
+  706  python3.7 usage.py 
+  707  clear
+  708  python3.7 flask_api.py 
+  709  python3.7 flask_api.py &
+  710  history |grep curl
+  711  curl -X POST -H "Content-Type: application/json" -d '{"name":"testing-new","image":"nginx","cpus":"2","gpus":"1","memory":"1024","nodes":"1"}' http://127.0.0.1:5000/usage
+  712  ps aux |grep flask
+  713  kill -9 5903
+  714  ps aux |grep usage
+  715  clear
+  716  vim flask_api.py 
+  717  vim usage.py 
+  718  python3.7 flask_api.py &
+  719  curl -X POST -H "Content-Type: application/json" -d '{"name":"testing-new","image":"nginx","cpus":"4","gpus":"0","memory":"1024","nodes":"1"}' http://127.0.0.1:5000/usage
+  720  ps aux |grep flask
+  721  kill -9 9902
+  722  vim usage.py 
+  723  vim usage_old.py 
+  724  python3.7 flask_api.py &
+  725  curl -X POST -H "Content-Type: application/json" -d '{"name":"testing-new","image":"nginx","cpus":"4","gpus":"0","memory":"1024","nodes":"1"}' http://127.0.0.1:5000/usage
+  726  kubectl get pods -o wide
+  727  curl -X POST -H "Content-Type: application/json" -d '{"name":"testing-new1","image":"nginx","cpus":"4","gpus":"0","memory":"1024","nodes":"1"}' http://127.0.0.1:5000/usage
+  728  kubectl get pods -o wide
+  729  kubectl delete pods testing-new
+  730  kubectl delete pods testing-new1
+  731  vim getnodes.py 
+  732  clear
+  733  ls
+  734  vim templates/index.html 
+  735  kubectl get pods -wide
+  736  kubectl get pods -o wide
+  737  kubectl delete pod testpod
+  738  watch kubectl get pods -o wide
+  739  kubectl get pods -o wide
+  740  kubectl delete pod testpod
+  741  kubectl get pods -o wide
+  742  vim templates/index.html 
+  743  ps aux |grep flask
+  744  kill -9 12224
+  745  clear
+  746  kubectl get pods
+  747  clear
+  748  python3.7 flask_api.py 
+  749  vim templates/index.html 
+  750  python3.7 flask_api.py 
+  751  python3.7 flask_api.py &
+  752  clear
+  753  watch kubectl get pods -o wide
+  754  clear
+  755  kubectl get pods -o wide
+  756  kubectl describe node pakistan-node
+  757  clear
+  758  history |grep curl
+  759  curl -X POST -H "Content-Type: application/json" -d '{"name":"testing-new1","image":"nginx","cpus":"4","gpus":"1","memory":"1024","nodes":"1"}' http://127.0.0.1:5000/usage
+  760  kubectl get pods
+  761  kubectl get pods -o wide
+  762  curl -X POST -H "Content-Type: application/json" -d '{"name":"testing-new1","image":"nginx","cpus":"4","gpus":"1","memory":"1024","nodes":"1"}' http://127.0.0.1:5000/usage
+  763  kubectl get pods -o wide
+  764  curl -X POST -H "Content-Type: application/json" -d '{"name":"testing-new2","image":"nginx","cpus":"4","gpus":"1","memory":"1024","nodes":"1"}' http://127.0.0.1:5000/usage
+  765  kubectl get pods -o wide
+  766  kubectl delete pod testing-new1
+  767  kubectl delete pod testing-new2
+  768  kubectl delete pod testpod
+  769  kubectl delete pod testpod1
+  770  kubectl delete pod testpod2
+  771  kubectl delete pod testpod3
+  772  kubectl delete pod testpod4
+  773  clear
+  774  vim usage.py 
+  775  vim usage_old.py 
+  776  vim createpods.py 
+  777  vim getnodes.py 
+  778  vim createpods.py 
+  779  python3.7 usage_old.py 
+  780  vim createpods.py 
+  781  vim usage_old.py 
+  782  vim usage.py 
+  783  vim createpods.py 
+  784  python3.7 usage_old.py 
+  785  vim usage_old.py 
+  786  python3.7 usage_old.py 
+  787  vim getnodes.py 
+  788  vim usage_old.py 
+  789  python3.7 usage_old.py 
+  790  vim usage_old.py 
+  791  python3.7 usage_old.py 
+  792  vim usage_old.py 
+  793  python3.7 usage_old.py 
+  794  vim usage_old.py 
+  795  python3.7 usage_old.py 
+  796  vim usage_old.py 
+  797  python3.7 usage_old.py 
+  798  vim usage_old.py 
+  799  python3.7 usage_old.py 
+  800  vim usage_old.py 
+  801  python3.7 usage_old.py 
+  802  vim usage_old.py 
+  803  python3.7 usage_old.py 
+  804  vim createpods.py 
+  805  vim usage_old.py 
+  806  python3.7 usage_old.py 
+  807  kubectl get pods -o wide
+  808  vim usage_old.py 
+  809  kubectl get pods -o wide
+  810  python3.7 usage_old.py 
+  811  kubectl get pods -o wide
+  812  kubectl delete pod test
+  813  kubectl delete pod test1
+  814  vim ../tensorflow-kubeflow-examples/tf_job_mnist.yaml 
+  815  vim createpods.py 
+  816  clear
+  817  python3.7 usage_old.py 
+  818  kubectl get pods -o wide
+  819  kubectl describe node sukkur-node
+  820  vim usage_old.py 
+  821  python3.7 usage_old.py 
+  822  vim usage_old.py 
+  823  python3.7 usage_old.py 
+  824  vim usage_old.py 
+  825  vim createpods.py 
+  826  python3.7 usage_old.py 
+  827  vim usage_old.py 
+  828  python3.7 usage_old.py 
+  829  vim createpods.py 
+  830  python3.7 usage_old.py 
+  831  vim createpods.py 
+  832  python3.7 usage_old.py 
+  833  vim createpods.py 
+  834  python3.7 usage_old.py 
+  835  vim createpods.py 
+  836  python3.7 usage_old.py 
+  837  kubectl get pods -o wide
+  838  python3.7 usage_old.py 
+  839  vim usage_old.py 
+  840  python3.7 usage_old.py 
+  841  kubectl get pods -o wide
+  842  vim usage_old.py 
+  843  kubectl get pods -o wide
+  844  kubectl describe node malaysia-node
+  845  kubectl describe node sukkur-node
+  846  kubectl describe node pakistan-node
+  847  clear
+  848  python3.7 usage_old.py 
+  849  kubectl get pods -o wide
+  850  kubectl describe node pakistan-node
+  851  python3.7 usage_old.py 
+  852  clear
+  853  kubectl get pods
+  854  kubectl delete pod test
+  855  kubectl delete pod test1
+  856  kubectl delete pod test2
+  857  vim usage_old.py 
+  858  vim usage.py 
+  859  vim usage_old.py 
+  860  vim usage.py 
+  861  ps aux |grep flask
+  862  kill -9 31746
+  863  clear
+  864  python3.7 flask_api.py 
+  865  kubectl get pods -o wide
+  866  kubectl delete pod testpod
+  867  kubectl delete pod testpod1
+  868  ps aux |grep flask
+  869  vim usage.py 
+  870  python3.7 flask_api.py 
+  871  kubectl get pods -o wide
+  872  kubectl delete pod testpod
+  873  vim usage.py 
+  874  python3.7 flask_api.py 
+  875  kubectl delete pod testpod
+  876  vim flask_api.py 
+  877  vim usage.py 
+  878  vim getnodes.py 
+  879  vim usage.py 
+  880  vim usage_old.py 
+  881  vim createpods.py 
+  882  python3.7 usage_old.py 
+  883  vim usage_old.py 
+  884  python3.7 usage_old.py 
+  885  vim usage_old.py 
+  886  python3.7 usage_old.py 
+  887  vim usage_old.py 
+  888  python3.7 usage_old.py 
+  889  vim usage_old.py 
+  890  python3.7 usage_old.py 
+  891  vim createpods.py 
+  892  exit
+  893  clear
+  894  cd asif/sched-agent-python/
+  895  ls
+  896  vim usage.py 
+  897  exitr
+  898  exit
+  899  cd asif/sched-agent-python/
+  900  ls
+  901  clear
+  902  ls
+  903  vim usage_old.py 
+  904  clear
+  905  ls
+  906  vim flask_api.py 
+  907  clear
+  908  exit
+  909  clear
+  910  vim asif/sched-agent-python/usage_old.py 
+  911  exit
+  912  clear
+  913  ls
+  914  cd asif/sched-agent-python/
+  915  ls
+  916  clear
+  917  history 
+  918  vim usage.py 
+  919  vim flask_api.py 
+  920  python3.7 flask_api.py 
+  921  clear
+  922  kubectl get pods
+  923  kubectl delete pod testpod
+  924  vim templates/index.html 
+  925  vim usage.py 
+  926  vim flask_api.py 
+  927  vim usage.py 
+  928  vim usage_old.py 
+  929  vim usage.py 
+  930  vim usage_old.py 
+  931  vim usage.py 
+  932  vim usage_old.py 
+  933  vim createpods.py 
+  934  clear
+  935  python3.7 usage_old.py 
+  936  vim createpods.py 
+  937  python3.7 usage_old.py 
+  938  kubectl get pods -o wide
+  939  vim usage_old.py 
+  940  python3.7 usage_old.py 
+  941  kubectl get pods -o wide
+  942  vim usage_old.py 
+  943  python3.7 usage_old.py 
+  944  kubectl get pods -o wide
+  945  vim usage_old.py 
+  946  python3.7 usage_old.py 
+  947  kubectl get pods -o wide
+  948  vim usage_old.py 
+  949  python3.7 usage_old.py 
+  950  kubectl delete pod test
+  951  kubectl get pods -o wide
+  952  kubectl delete pod test1
+  953  kubectl delete pod test2
+  954  kubectl delete pod test333
+  955  clear
+  956  ls
+  957  python3.7 flask_api.py &
+  958  ps aux |grep flask
+  959  kill -9 82933
+  960  clear
+  961  ls
+  962  vim usage_old.py 
+  963  vim usage.py 
+  964  clear
+  965  vim usage_old.py 
+  966  python3.7 usage_old.py 
+  967  vim usage_old.py 
+  968  python3.7 usage_old.py 
+  969  vim usage_old.py 
+  970  python3.7 usage_old.py 
+  971  vim usage_old.py 
+  972  python3.7 usage_old.py 
+  973  vim usage_old.py 
+  974  python3.7 usage_old.py 
+  975  vim usage_old.py 
+  976  python3.7 usage_old.py 
+  977  vim usage_old.py 
+  978  python3.7 usage_old.py 
+  979  vim usage_old.py 
+  980  python3.7 usage_old.py 
+  981  vim usage_old.py 
+  982  python3.7 usage_old.py 
+  983  vim usage_old.py 
+  984  python3.7 usage_old.py 
+  985  vim usage_old.py 
+  986  python3.7 usage_old.py 
+  987  vim usage_old.py 
+  988  python3.7 usage_old.py 
+  989  vim usage_old.py 
+  990  python3.7 usage_old.py 
+  991  vim usage_old.py 
+  992  python3.7 usage_old.py 
+  993  vim usage_old.py 
+  994  python3.7 usage_old.py 
+  995  kubectl get pods
+  996  kubectl get pods -o wide
+  997  kubectl delete pod test3
+  998  clear
+  999  kubectl get nodes
+ 1000  exit
+ 1001  clear
+ 1002  his
+ 1003  history 
+ 1004  clear
+ 1005  ls
+ 1006  cd www/
+ 1007  ls
+ 1008  cd ..
+ 1009  ls
+ 1010  cd manifests/
+ 1011  ls
+ 1012  cd ..
+ 1013  ls
+ 1014  cd asif/
+ 1015  ls
+ 1016  cd ..
+ 1017  ls
+ 1018  mkdir asiaconnect
+ 1019  cd asiaconnect/
+ 1020  echo "# asiaconnect" >> README.md
+ 1021  git init
+ 1022  git add .
+ 1023  git commit -m "created asiaconnect"
+ 1024   git config --global user.email "you@example.com"
+ 1025  git config --global user.name "syedasifraza"
+ 1026  git commit -m "created asiaconnect"
+ 1027  git branch -M main
+ 1028  git remote add origin https://github.com/syedasifraza/asiaconnect.git
+ 1029  git push -u origin main
+ 1030  cp ../asif/* .
+ 1031  cp -R ../asif/* .
+ 1032  clear
+ 1033  ls
+ 1034  cd my-mpi-build/
+ 1035  ls
+ 1036  cd ..
+ 1037  ls
+ 1038  clear
+ 1039  git add .
+ 1040  git commit -m "files added"
+ 1041  git remote add origin https://github.com/syedasifraza/asiaconnect.git
+ 1042  git push -u origin main
+ 1043  ls
+ 1044  cd sched-agent-python/
+ 1045  ls
+ 1046  cd ..
+ 1047  ls
+ 1048  history >> history.txt
