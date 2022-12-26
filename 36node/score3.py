@@ -24,7 +24,8 @@ loss = {}
 for i in range(nodeinzone):
     for j in range(nodeinzone):
         if i<j:
-            url = "http://134.75.115.137/maddash/grids/36Node+Measurements+-+Example+Loss+Tests+-+Loss/Zone-"+szone+"-"+str(i+1)+"/Zone-"+dzone+"-"+str(j+1)+"/Packet+Loss/"
+            
+            url = "http://134.75.115.137/maddash/grids/36Node+Measurements+-+Example+Loss+Tests+-+Loss/203.250.172."+szone+str(i+1)+"/Zone-"+dzone+"-"+str(j+1)+"/Packet+Loss/"
             data = transdata(url)
             url = "http://134.75.115.137/maddash/grids/36Node+Measurements+-+Example+Loss+Tests+-+Loss/Zone-"+szone+"-"+str(j+1)+"/Zone-"+dzone+"-"+str(i+1)+"/Packet+Loss/"
             data2 = transdata(url)
