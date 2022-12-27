@@ -34,10 +34,11 @@ elif n >= 28 and n < 37:
 
 loss = {}
 for i in range(nodeinzone):
-    if i != n:
-        url = "http://134.75.115.137/maddash/grids/36Node+Measurements+-+Example+Loss+Tests+-+Loss/"+ip+"/203.250.172."+str(i+1)+"/Packet+Loss/"
+    zoneip = 9*(zone-1)+i
+    if zoneip != n:
+        url = "http://134.75.115.137/maddash/grids/36Node+Measurements+-+Example+Loss+Tests+-+Loss/"+ip+"/203.250.172."+zoneip+"/Packet+Loss/"
         data = transdata(url)
-        url = "http://134.75.115.137/maddash/grids/36Node+Measurements+-+Example+Loss+Tests+-+Loss/203.250.172."+str(i+1)+"/"+ip+"/Packet+Loss/"
+        url = "http://134.75.115.137/maddash/grids/36Node+Measurements+-+Example+Loss+Tests+-+Loss/203.250.172."+zoneip+"/"+ip+"/Packet+Loss/"
         data2 = transdata(url)
         if data >= data2 and 1-data > 0 :
             score = 100*(1-data*loweight)
@@ -45,30 +46,12 @@ for i in range(nodeinzone):
             score = 100*(1-data2*loweight)
         else:
             score = 0
-        print("203.250.172."+str(i+1)+", 203.250.172."+str(j+1)+"  Loss :"+str(data))
-        print("203.250.172."+str(j+1)+", 203.250.172."+str(i+1)+"  Loss :"+str(data2)+" , score :"+str(score))
-        loss[str(i+1)+str(j+1)] = score
-        loss[str(j+1)+str(i+1)] = score
+        print(ip+", 203.250.172."+zoneip+"  Loss :"+str(data))
+        print("203.250.172."+zoneip+", "+ip+"  Loss :"+str(data2)+" , score :"+str(score))
+        loss[str(ip)+"203.250.172."+str(zoneip)] = score
+        loss["203.250.172."++str(i+1)] = score
 
 
-
-
-
-        if i<j:
-            url = "http://134.75.115.137/maddash/grids/36Node+Measurements+-+Example+Loss+Tests+-+Loss/"+ip+"/203.250.172."+str(i+1)+"/Packet+Loss/"
-            data = transdata(url)
-            url = "http://134.75.115.137/maddash/grids/36Node+Measurements+-+Example+Loss+Tests+-+Loss/203.250.172."+str(i+1)+"/"+ip+"/Packet+Loss/"
-            data2 = transdata(url)
-            if data >= data2 and 1-data > 0 :
-                score = 100*(1-data*loweight)
-            elif data < data2 and 1-data2 > 0 :                
-                score = 100*(1-data2*loweight)
-            else:
-                score = 0
-            print("203.250.172."+str(i+1)+", 203.250.172."+str(j+1)+"  Loss :"+str(data))
-            print("203.250.172."+str(j+1)+", 203.250.172."+str(i+1)+"  Loss :"+str(data2)+" , score :"+str(score))
-            loss[str(i+1)+str(j+1)] = score
-            loss[str(j+1)+str(i+1)] = score
 
 delay = {}
 for i in range(nodeinzone):
