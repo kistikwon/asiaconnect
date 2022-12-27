@@ -4,8 +4,6 @@ import sys
 import re
 import operator
 
-szone = sys.argv[1]
-dzone = sys.argv[1]
 ip = sys.argv[1]
 
 thweight = 1
@@ -21,7 +19,18 @@ def transdata(url):
     regex = re.compile('[^0-9.]')
     return float(regex.sub('',r))
 
-if ip 
+p=ip.split('.')
+n = int(p[3])
+if n >= 1 and n < 10:
+    zone = "A"
+elif n >=10 and n < 19:
+    zone = "B"
+elif n >=18 and n < 28:
+    zone = "C"
+elif n >= 28 and n < 37:
+    zone = "D"
+
+
 loss = {}
 for i in range(nodeinzone):
     for j in range(nodeinzone):
