@@ -5,6 +5,7 @@ import re
 import operator
 
 ip = sys.argv[1]
+neednode = sys.argv[2]
 
 thweight = 1
 loweight = 1
@@ -30,8 +31,6 @@ elif n >=18 and n < 28:
 elif n >= 28 and n < 37:
     zone = 4
 
-szone = 'A'
-dzone = 'B'
 
 loss = {}
 for i in range(nodeinzone):
@@ -95,6 +94,7 @@ for i in range(nodeinzone):
             else : 
                 total[str(i+1)] = loss[str(i+1)+str(j+1)]+throughput[str(i+1)+str(j+1)]+delay[str(i+1)+str(j+1)]
 
-print(total)
 total2 = sorted(total.items(), key=operator.itemgetter(1), reverse=True)
 print(total2)
+for i in range(int(neednode)):
+    print("203.250.172."+str(total2[i].keys()))
