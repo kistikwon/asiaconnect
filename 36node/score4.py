@@ -34,71 +34,68 @@ elif n >= 28 and n < 37:
 
 loss = {}
 for i in range(nodeinzone):
-    zoneip = 9*(zone-1)+i
+    zoneip = 9*(zone-1)+i+1
     if zoneip != n:
-        url = "http://134.75.115.137/maddash/grids/36Node+Measurements+-+Example+Loss+Tests+-+Loss/"+ip+"/203.250.172."+zoneip+"/Packet+Loss/"
+        url = "http://134.75.115.137/maddash/grids/36Node+Measurements+-+Example+Loss+Tests+-+Loss/"+ip+"/203.250.172."+str(zoneip)+"/Packet+Loss/"
         data = transdata(url)
-        url = "http://134.75.115.137/maddash/grids/36Node+Measurements+-+Example+Loss+Tests+-+Loss/203.250.172."+zoneip+"/"+ip+"/Packet+Loss/"
+        url = "http://134.75.115.137/maddash/grids/36Node+Measurements+-+Example+Loss+Tests+-+Loss/203.250.172."+str(zoneip)+"/"+ip+"/Packet+Loss/"
         data2 = transdata(url)
         if data >= data2 and 1-data > 0 :
             score = 100*(1-data*loweight)
-        elif data < data2 and 1-data2 > 0 :                
+        elif data < data2 and 1-data2 > 0 :
             score = 100*(1-data2*loweight)
         else:
             score = 0
-        print(ip+", 203.250.172."+zoneip+"  Loss :"+str(data))
-        print("203.250.172."+zoneip+", "+ip+"  Loss :"+str(data2)+" , score :"+str(score))
+        print(ip+", 203.250.172."+str(zoneip)+"  Loss :"+str(data))
+        print("203.250.172."+str(zoneip)+", "+ip+"  Loss :"+str(data2)+" , score :"+str(score))
         loss[str(ip)+"203.250.172."+str(zoneip)] = score
-        loss["203.250.172."++str(i+1)] = score
-
+        loss["203.250.172."+str(zoneip)+str(ip)] = score
 
 
 delay = {}
 for i in range(nodeinzone):
-    for j in range(nodeinzone):
-        if i<j:            
-            url = "http://134.75.115.137/maddash/grids/36Node+Measurements+-+Example+Delay+Tests+-+Delay/203.250.172."+str(i+1)+"/203.250.172."+str(j+1)+"/Delay/"
-            data = transdata(url)
-            url = "http://134.75.115.137/maddash/grids/36Node+Measurements+-+Example+Delay+Tests+-+Delay/203.250.172."+str(i+1)+"/203.250.172."+str(j+1)+"/Delay/"
-            data2 = transdata(url)
-            if data >= data2 :
-                score = 100-deweight*data
-            elif data < data2 :
-                score = 100-deweight*data2
-            print("203.250.172."+str(i+1)+", 203.250.172."+str(j+1)+"  Delay :"+str(data))
-            print("203.250.172."+str(j+1)+", 203.250.172."+str(i+1)+"  Delay :"+str(data2)+" , score :"+str(score))
-            delay[str(i+1)+str(j+1)] = score
-            delay[str(j+1)+str(i+1)] = score
+    zoneip = 9*(zone-1)+i+1
+    if zoneip != n:
+        url = "http://134.75.115.137/maddash/grids/36Node+Measurements+-+Example+Delay+Tests+-+Delay/"+ip+"/203.250.172."+str(zoneip)+"/Delay/"
+        data = transdata(url)
+        url = "http://134.75.115.137/maddash/grids/36Node+Measurements+-+Example+Delay+Tests+-+Delay/203.250.172."+str(zoneip)+"/"+ip+"/Delay/"
+        data2 = transdata(url)
+        if data >= data2 :
+            score = 100-deweight*data
+        elif data < data2 :
+            score = 100-deweight*data2
+        print(ip+", 203.250.172."+str(zoneip)+"  Delay :"+str(data))
+        print("203.250.172."+str(zoneip)+", "+ip+"  Delay :"+str(data2)+" , score :"+str(score))
+        delay[str(ip)+"203.250.172."+str(zoneip)] = score
+        delay["203.250.172."+str(zoneip)+str(ip)] = score
+
 
 throughput = {}
 for i in range(nodeinzone):
-    for j in range(nodeinzone):
-        if i<j:
-            url = "http://134.75.115.137/maddash/grids/36Node+Measurements+-+Example+Throughput+Tests+-+Throughput/203.250.172."+str(i+1)+"/203.250.172."+str(j+1)+"/Throughput/"
-            data = transdata(url)
-            url = "http://134.75.115.137/maddash/grids/36Node+Measurements+-+Example+Throughput+Tests+-+Throughput/203.250.172."+str(i+1)+"/203.250.172."+str(j+1)+"/Throughput/"
-            data2 = transdata(url)
-            if data >= data2 :
-                score = 100*data2*thweight
-            elif data < data2 :
-                score = 100*data*thweight
-            print("203.250.172."+str(i+1)+", 203.250.172."+str(j+1)+"  Throughput :"+str(data))
-            print("203.250.172."+str(j+1)+", 203.250.172."+str(i+1)+"  Throughput :"+str(data2)+" , score :"+str(score))
-            throughput[str(i+1)+str(j+1)] = score
-            throughput[str(j+1)+str(i+1)] = score
+    zoneip = 9*(zone-1)+i+1
+    if zoneip != n:
+        url = "http://134.75.115.137/maddash/grids/36Node+Measurements+-+Example+Throughput+Tests+-+Throughput/"+ip+"/203.250.172."+str(zoneip)+"/Throughput/"
+        data = transdata(url)
+        url = "http://134.75.115.137/maddash/grids/36Node+Measurements+-+Example+Throughput+Tests+-+Throughput/203.250.172."+str(zoneip)+"/"+ip+"/Throughput/"
+        data2 = transdata(url)
+        if data >= data2 :
+            score = 100*data2*thweight
+        elif data < data2 :
+            score = 100*data*thweight
+        print(ip+", 203.250.172."+str(zoneip)+"  Throughput :"+str(data))
+        print("203.250.172."+str(zoneip)+", "+ip+"  Throughput :"+str(data2)+" , score :"+str(score))
+        throughput[str(ip)+"203.250.172."+str(zoneip)] = score
+        throughput["203.250.172."+str(zoneip)+str(ip)] = score
 
 total = {}
 for i in range(nodeinzone):
-    for j in range(nodeinzone):
-        if i!=j:
-            if (str(i+1)) in total :
-                total[str(i+1)] = total[str(i+1)]+loss[str(i+1)+str(j+1)]+throughput[str(i+1)+str(j+1)]+delay[str(i+1)+str(j+1)]
-            else : 
-                total[str(i+1)] = loss[str(i+1)+str(j+1)]+throughput[str(i+1)+str(j+1)]+delay[str(i+1)+str(j+1)]
+    zoneip = 9*(zone-1)+i+1
+    if zoneip != n:
+        total["203.250.172."+str(zoneip)] = loss[str(ip)+"203.250.172."+str(zoneip)]+throughput[str(ip)+"203.250.172."+str(zoneip)]+delay[str(ip)+"203.250.172."+str(zoneip)]
 
 total2 = sorted(total.items(), key=operator.itemgetter(1), reverse=True)
 print(total2)
 print(type(total))
 print(type(total2))
 for i in range(int(neednode)):
-    print("203.250.172."+str(total2[i][0]))
+    print(str(total2[i][0]))
