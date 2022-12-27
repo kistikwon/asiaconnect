@@ -47,10 +47,10 @@ for i in range(nodeinzone):
                 score = 100*(1-data2*loweight)
             else:
                 score = 0
-            print("Zone-"+szone+"-"+str(i+1)+", Zone-"+dzone+"-"+str(j+1)+"  Loss :"+str(data))
-            print("Zone-"+szone+"-"+str(j+1)+", Zone-"+dzone+"-"+str(i+1)+"  Loss :"+str(data2)+" , score :"+str(score))
-            loss[szone+str(i+1)+dzone+str(j+1)] = score
-            loss[szone+str(j+1)+dzone+str(i+1)] = score
+            print("203.250.172."+str(i+1)+", 203.250.172."+str(j+1)+"  Loss :"+str(data))
+            print("203.250.172."+str(j+1)+", 203.250.172."+str(i+1)+"  Loss :"+str(data2)+" , score :"+str(score))
+            loss[str(i+1)+str(j+1)] = score
+            loss[str(j+1)+str(i+1)] = score
 
 delay = {}
 for i in range(nodeinzone):
@@ -64,10 +64,10 @@ for i in range(nodeinzone):
                 score = 100-deweight*data
             elif data < data2 :
                 score = 100-deweight*data2
-            print("Zone-"+szone+"-"+str(i+1)+", Zone-"+dzone+"-"+str(j+1)+"  Delay :"+str(data))
-            print("Zone-"+szone+"-"+str(j+1)+", Zone-"+dzone+"-"+str(i+1)+"  Delay :"+str(data2)+" , score :"+str(score))
-            delay[szone+str(i+1)+dzone+str(j+1)] = score
-            delay[szone+str(j+1)+dzone+str(i+1)] = score
+            print("203.250.172."+str(i+1)+", 203.250.172."+str(j+1)+"  Delay :"+str(data))
+            print("203.250.172."+str(j+1)+", 203.250.172."+str(i+1)+"  Delay :"+str(data2)+" , score :"+str(score))
+            delay[str(i+1)+str(j+1)] = score
+            delay[str(j+1)+str(i+1)] = score
 
 throughput = {}
 for i in range(nodeinzone):
@@ -81,23 +81,20 @@ for i in range(nodeinzone):
                 score = 100*data2*thweight
             elif data < data2 :
                 score = 100*data*thweight
-            print("Zone-"+szone+"-"+str(i+1)+", Zone-"+dzone+"-"+str(j+1)+"  Throughput :"+str(data))
-            print("Zone-"+szone+"-"+str(j+1)+", Zone-"+dzone+"-"+str(i+1)+"  Throughput :"+str(data2)+" , score :"+str(score))
-            throughput[szone+str(i+1)+dzone+str(j+1)] = score
-            throughput[szone+str(j+1)+dzone+str(i+1)] = score
+            print("203.250.172."+str(i+1)+", 203.250.172."+str(j+1)+"  Throughput :"+str(data))
+            print("203.250.172."+str(j+1)+", 203.250.172."+str(i+1)+"  Throughput :"+str(data2)+" , score :"+str(score))
+            throughput[str(i+1)+str(j+1)] = score
+            throughput[str(j+1)+str(i+1)] = score
 
 total = {}
 for i in range(nodeinzone):
     for j in range(nodeinzone):
         if i!=j:
-            if (szone+str(i+1)) in total :
-                total[szone+str(i+1)] = total[szone+str(i+1)]+loss[szone+str(i+1)+dzone+str(j+1)]+throughput[szone+str(i+1)+dzone+str(j+1)]+delay[szone+str(i+1)+dzone+str(j+1)]
+            if (str(i+1)) in total :
+                total[str(i+1)] = total[str(i+1)]+loss[str(i+1)+str(j+1)]+throughput[str(i+1)+str(j+1)]+delay[str(i+1)+str(j+1)]
             else : 
-                total[szone+str(i+1)] = loss[szone+str(i+1)+dzone+str(j+1)]+throughput[szone+str(i+1)+dzone+str(j+1)]+delay[szone+str(i+1)+dzone+str(j+1)]
+                total[str(i+1)] = loss[str(i+1)+str(j+1)]+throughput[str(i+1)+str(j+1)]+delay[str(i+1)+str(j+1)]
 
 print(total)
 total2 = sorted(total.items(), key=operator.itemgetter(1), reverse=True)
 print(total2)
-
-#filternode = max(total,key=total.get)
-#print("Filter node: "+filternode+", max score is : "+str(max(total.values())))
