@@ -21,6 +21,7 @@ def transdata(url):
     regex = re.compile('[^0-9.]')
     return float(regex.sub('',r))
 
+if ip 
 loss = {}
 for i in range(nodeinzone):
     for j in range(nodeinzone):
