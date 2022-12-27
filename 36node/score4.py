@@ -33,6 +33,10 @@ elif n >= 28 and n < 37:
 
 
 loss = {}
+delay = {}
+throughput = {}
+total = {}
+
 for i in range(nodeinzone):
     zoneip = 9*(zone-1)+i+1
     if zoneip != n:
@@ -51,8 +55,6 @@ for i in range(nodeinzone):
         loss[str(ip)+"203.250.172."+str(zoneip)] = score
         loss["203.250.172."+str(zoneip)+str(ip)] = score
 
-
-delay = {}
 for i in range(nodeinzone):
     zoneip = 9*(zone-1)+i+1
     if zoneip != n:
@@ -69,8 +71,6 @@ for i in range(nodeinzone):
         delay[str(ip)+"203.250.172."+str(zoneip)] = score
         delay["203.250.172."+str(zoneip)+str(ip)] = score
 
-
-throughput = {}
 for i in range(nodeinzone):
     zoneip = 9*(zone-1)+i+1
     if zoneip != n:
@@ -87,7 +87,6 @@ for i in range(nodeinzone):
         throughput[str(ip)+"203.250.172."+str(zoneip)] = score
         throughput["203.250.172."+str(zoneip)+str(ip)] = score
 
-total = {}
 for i in range(nodeinzone):
     zoneip = 9*(zone-1)+i+1
     if zoneip != n:
@@ -98,4 +97,4 @@ print(total2)
 print(type(total))
 print(type(total2))
 for i in range(int(neednode)):
-    print(str(total2[i][0]))
+    print("======================="+str(total2[i][0])+"=========================")
