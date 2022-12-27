@@ -22,23 +22,24 @@ def transdata(url):
 p=ip.split('.')
 n = int(p[3])
 if n >= 1 and n < 10:
-    zone = "A"
+    zone = 1
 elif n >=10 and n < 19:
-    zone = "B"
+    zone = 2
 elif n >=18 and n < 28:
-    zone = "C"
+    zone = 3
 elif n >= 28 and n < 37:
-    zone = "D"
+    zone = 4
 
+szone = 'A'
+dzone = 'B'
 
 loss = {}
 for i in range(nodeinzone):
     for j in range(nodeinzone):
         if i<j:
-            
-            url = "http://134.75.115.137/maddash/grids/36Node+Measurements+-+Example+Loss+Tests+-+Loss/203.250.172."+szone+str(i+1)+"/Zone-"+dzone+"-"+str(j+1)+"/Packet+Loss/"
+            url = "http://134.75.115.137/maddash/grids/36Node+Measurements+-+Example+Loss+Tests+-+Loss/203.250.172."+str(i+1)+"/203.250.172."+str(j+1)+"/Packet+Loss/"
             data = transdata(url)
-            url = "http://134.75.115.137/maddash/grids/36Node+Measurements+-+Example+Loss+Tests+-+Loss/Zone-"+szone+"-"+str(j+1)+"/Zone-"+dzone+"-"+str(i+1)+"/Packet+Loss/"
+            url = "http://134.75.115.137/maddash/grids/36Node+Measurements+-+Example+Loss+Tests+-+Loss/203.250.172."+str(i+1)+"/203.250.172."+str(j+1)+"/Packet+Loss/"
             data2 = transdata(url)
             if data >= data2 and 1-data > 0 :
                 score = 100*(1-data*loweight)
@@ -55,9 +56,9 @@ delay = {}
 for i in range(nodeinzone):
     for j in range(nodeinzone):
         if i<j:            
-            url = "http://134.75.115.137/maddash/grids/36Node+Measurements+-+Example+Delay+Tests+-+Delay/Zone-"+szone+"-"+str(i+1)+"/Zone-"+dzone+"-"+str(j+1)+"/Delay/"
+            url = "http://134.75.115.137/maddash/grids/36Node+Measurements+-+Example+Delay+Tests+-+Delay/203.250.172."+str(i+1)+"/203.250.172."+str(j+1)+"/Delay/"
             data = transdata(url)
-            url = "http://134.75.115.137/maddash/grids/36Node+Measurements+-+Example+Delay+Tests+-+Delay/Zone-"+szone+"-"+str(j+1)+"/Zone-"+dzone+"-"+str(i+1)+"/Delay/"
+            url = "http://134.75.115.137/maddash/grids/36Node+Measurements+-+Example+Delay+Tests+-+Delay/203.250.172."+str(i+1)+"/203.250.172."+str(j+1)+"/Delay/"
             data2 = transdata(url)
             if data >= data2 :
                 score = 100-deweight*data
@@ -72,9 +73,9 @@ throughput = {}
 for i in range(nodeinzone):
     for j in range(nodeinzone):
         if i<j:
-            url = "http://134.75.115.137/maddash/grids/36Node+Measurements+-+Example+Throughput+Tests+-+Throughput/Zone-"+szone+"-"+str(i+1)+"/Zone-"+dzone+"-"+str(j+1)+"/Throughput/"
+            url = "http://134.75.115.137/maddash/grids/36Node+Measurements+-+Example+Throughput+Tests+-+Throughput/203.250.172."+str(i+1)+"/203.250.172."+str(j+1)+"/Throughput/"
             data = transdata(url)
-            url = "http://134.75.115.137/maddash/grids/36Node+Measurements+-+Example+Throughput+Tests+-+Throughput/Zone-"+szone+"-"+str(j+1)+"/Zone-"+dzone+"-"+str(i+1)+"/Throughput/"
+            url = "http://134.75.115.137/maddash/grids/36Node+Measurements+-+Example+Throughput+Tests+-+Throughput/203.250.172."+str(i+1)+"/203.250.172."+str(j+1)+"/Throughput/"
             data2 = transdata(url)
             if data >= data2 :
                 score = 100*data2*thweight
