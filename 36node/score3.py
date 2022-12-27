@@ -6,6 +6,7 @@ import operator
 
 szone = sys.argv[1]
 dzone = sys.argv[1]
+ip = sys.argv[1]
 
 thweight = 1
 loweight = 1
