@@ -8,7 +8,7 @@ ip = sys.argv[1]
 neednode = sys.argv[2]
 
 thweight = 1
-loweight = 1
+loweight = 100
 deweight = 1
 nodeinzone = 9
 
@@ -46,9 +46,9 @@ for j in range(int(neednode)):
             url = "http://134.75.115.137/maddash/grids/36Node+Measurements+-+Example+Loss+Tests+-+Loss/203.250.172."+str(zoneip)+"/"+ip+"/Packet+Loss/"
             data2 = transdata(url)
             if data >= data2 and 1-data > 0 :
-                score = 100*(1-data*loweight)
+                score = 100-data*loweight
             elif data < data2 and 1-data2 > 0 :
-                score = 100*(1-data2*loweight)
+                score = 100-data2*loweight
             else:
                 score = 0
             print(ip+", 203.250.172."+str(zoneip)+"  Loss :"+str(data))
@@ -98,3 +98,7 @@ for j in range(int(neednode)):
     print(type(total))
     print(type(total2))
     print("======================="+str(total2[0][0])+"=========================")
+    ip = str(total2[0][0])
+    print (ip)
+    p=ip.split('.')
+    n = int(p[3])
