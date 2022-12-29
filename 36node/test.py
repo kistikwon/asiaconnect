@@ -17,8 +17,8 @@ print(ip.split('.'))
 p=ip.split('.')
 print(p[3])
 print(type(p[3]))
-
-if int(p[3]) < 30 :
+a = [1 ,2 ,3 ,4]
+if int(p[3]) not in a :
     print('xx')
 
 

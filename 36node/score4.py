@@ -36,19 +36,23 @@ loss = {}
 delay = {}
 throughput = {}
 total = {}
+iplist = []
+selectlist = []
+pretotal = {}
 
 for j in range(int(neednode)):
+    iplist.append(n)
     for i in range(nodeinzone):
         zoneip = 9*(zone-1)+i+1
-        if zoneip != n:
+        if zoneip not in iplist:
             url = "http://134.75.115.137/maddash/grids/36Node+Measurements+-+Example+Loss+Tests+-+Loss/"+ip+"/203.250.172."+str(zoneip)+"/Packet+Loss/"
             data = transdata(url)
             url = "http://134.75.115.137/maddash/grids/36Node+Measurements+-+Example+Loss+Tests+-+Loss/203.250.172."+str(zoneip)+"/"+ip+"/Packet+Loss/"
             data2 = transdata(url)
-            if data >= data2 and 1-data > 0 :
-                score = 100-data*loweight
-            elif data < data2 and 1-data2 > 0 :
-                score = 100-data2*loweight
+            if data >= data2 and 20-data*loweight > 0 :
+                score = 20-data*loweight
+            elif data < data2 and 20-data2*loweight > 0 :
+                score = 20-data2*loweight
             else:
                 score = 0
             print(ip+", 203.250.172."+str(zoneip)+"  Loss :"+str(data))
@@ -58,15 +62,17 @@ for j in range(int(neednode)):
 
     for i in range(nodeinzone):
         zoneip = 9*(zone-1)+i+1
-        if zoneip != n:
+        if zoneip not in iplist:
             url = "http://134.75.115.137/maddash/grids/36Node+Measurements+-+Example+Delay+Tests+-+Delay/"+ip+"/203.250.172."+str(zoneip)+"/Delay/"
             data = transdata(url)
             url = "http://134.75.115.137/maddash/grids/36Node+Measurements+-+Example+Delay+Tests+-+Delay/203.250.172."+str(zoneip)+"/"+ip+"/Delay/"
             data2 = transdata(url)
-            if data >= data2 :
-                score = 100-deweight*data
-            elif data < data2 :
-                score = 100-deweight*data2
+            if data >= data2 and 40-deweight*data > 0 :
+                score = 40-deweight*data
+            elif data < data2 and 40-deweight*data2 > 0:
+                score = 40-deweight*data2
+            else:
+                score = 0
             print(ip+", 203.250.172."+str(zoneip)+"  Delay :"+str(data))
             print("203.250.172."+str(zoneip)+", "+ip+"  Delay :"+str(data2)+" , score :"+str(score))
             delay[str(ip)+"203.250.172."+str(zoneip)] = score
@@ -74,15 +80,15 @@ for j in range(int(neednode)):
 
     for i in range(nodeinzone):
         zoneip = 9*(zone-1)+i+1
-        if zoneip != n:
+        if zoneip not in iplist:
             url = "http://134.75.115.137/maddash/grids/36Node+Measurements+-+Example+Throughput+Tests+-+Throughput/"+ip+"/203.250.172."+str(zoneip)+"/Throughput/"
             data = transdata(url)
             url = "http://134.75.115.137/maddash/grids/36Node+Measurements+-+Example+Throughput+Tests+-+Throughput/203.250.172."+str(zoneip)+"/"+ip+"/Throughput/"
             data2 = transdata(url)
             if data >= data2 :
-                score = 100*data2*thweight
+                score = 40*data2*thweight
             elif data < data2 :
-                score = 100*data*thweight
+                score = 40*data*thweight
             print(ip+", 203.250.172."+str(zoneip)+"  Throughput :"+str(data))
             print("203.250.172."+str(zoneip)+", "+ip+"  Throughput :"+str(data2)+" , score :"+str(score))
             throughput[str(ip)+"203.250.172."+str(zoneip)] = score
@@ -90,15 +96,19 @@ for j in range(int(neednode)):
 
     for i in range(nodeinzone):
         zoneip = 9*(zone-1)+i+1
-        if zoneip != n:
-            total["203.250.172."+str(zoneip)] = loss[str(ip)+"203.250.172."+str(zoneip)]+throughput[str(ip)+"203.250.172."+str(zoneip)]+delay[str(ip)+"203.250.172."+str(zoneip)]
+        if zoneip not in iplist:
+            if "203.250.172."+str(zoneip) in pretotal :
+                total["203.250.172."+str(zoneip)] =  pretotal["203.250.172."+str(zoneip)] + loss[str(ip)+"203.250.172."+str(zoneip)]+throughput[str(ip)+"203.250.172."+str(zoneip)]+delay[str(ip)+"203.250.172."+str(zoneip)]
+            else :
+                total["203.250.172."+str(zoneip)] = loss[str(ip)+"203.250.172."+str(zoneip)]+throughput[str(ip)+"203.250.172."+str(zoneip)]+delay[str(ip)+"203.250.172."+str(zoneip)]
 
     total2 = sorted(total.items(), key=operator.itemgetter(1), reverse=True)
+    pretotal = dict(total2)
     print(total2)
-    print(type(total))
-    print(type(total2))
     print("======================="+str(total2[0][0])+"=========================")
     ip = str(total2[0][0])
-    print (ip)
     p=ip.split('.')
     n = int(p[3])
+    selectlist.append(ip)
+    total = {}
+print(selectlist)
