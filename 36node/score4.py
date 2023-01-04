@@ -4,14 +4,6 @@ import sys
 import re
 import operator
 
-ip = sys.argv[1]
-neednode = sys.argv[2]
-
-thweight = 1
-loweight = 100
-deweight = 1
-nodeinzone = 9
-
 def transdata(url):
     data = requests.get(url)
     binary = data.content
@@ -20,17 +12,13 @@ def transdata(url):
     regex = re.compile('[^0-9.]')
     return float(regex.sub('',r))
 
-p=ip.split('.')
-n = int(p[3])
-if n >= 1 and n < 10:
-    zone = 1
-elif n >=10 and n < 19:
-    zone = 2
-elif n >=18 and n < 28:
-    zone = 3
-elif n >= 28 and n < 37:
-    zone = 4
+thweight = 1
+loweight = 100
+deweight = 1
 
+ip = sys.argv[1]
+neednode = sys.argv[len(sys.argv)-1]
+nodeinzone = len(sys.argv)-2
 
 loss = {}
 delay = {}
@@ -40,14 +28,15 @@ iplist = []
 selectlist = []
 pretotal = {}
 
+selectlist.append(ip)
+
 for j in range(int(neednode)):
-    iplist.append(n)
+    iplist.append(ip)
     for i in range(nodeinzone):
-        zoneip = 9*(zone-1)+i+1
-        if zoneip not in iplist:
-            url = "http://134.75.115.137/maddash/grids/36Node+Measurements+-+Example+Loss+Tests+-+Loss/"+ip+"/203.250.172."+str(zoneip)+"/Packet+Loss/"
+        if sys.argv[i+1] not in iplist:
+            url = "http://134.75.115.137/maddash/grids/36Node+Measurements+-+Example+Loss+Tests+-+Loss/"+ip+"/"+sys.argv[i+1]+"/Packet+Loss/"
             data = transdata(url)
-            url = "http://134.75.115.137/maddash/grids/36Node+Measurements+-+Example+Loss+Tests+-+Loss/203.250.172."+str(zoneip)+"/"+ip+"/Packet+Loss/"
+            url = "http://134.75.115.137/maddash/grids/36Node+Measurements+-+Example+Loss+Tests+-+Loss/"+sys.argv[i+1]+"/"+ip+"/Packet+Loss/"
             data2 = transdata(url)
             if data >= data2 and 20-data*loweight > 0 :
                 score = 20-data*loweight
@@ -55,17 +44,16 @@ for j in range(int(neednode)):
                 score = 20-data2*loweight
             else:
                 score = 0
-            print(ip+", 203.250.172."+str(zoneip)+"  Loss :"+str(data))
-            print("203.250.172."+str(zoneip)+", "+ip+"  Loss :"+str(data2)+" , score :"+str(score))
-            loss[str(ip)+"203.250.172."+str(zoneip)] = score
-            loss["203.250.172."+str(zoneip)+str(ip)] = score
+            print(ip+" , "+sys.argv[i+1]+"  Loss :"+str(data))
+            print(sys.argv[i+1]+" , "+ip+"  Loss :"+str(data2)+" , score :"+str(score))
+            loss[ip+","+sys.argv[i+1]] = score
+            loss[sys.argv[i+1]+","+ip] = score
 
     for i in range(nodeinzone):
-        zoneip = 9*(zone-1)+i+1
-        if zoneip not in iplist:
-            url = "http://134.75.115.137/maddash/grids/36Node+Measurements+-+Example+Delay+Tests+-+Delay/"+ip+"/203.250.172."+str(zoneip)+"/Delay/"
+        if sys.argv[i+1] not in iplist:
+            url = "http://134.75.115.137/maddash/grids/36Node+Measurements+-+Example+Delay+Tests+-+Delay/"+ip+"/"+sys.argv[i+1]+"/Delay/"
             data = transdata(url)
-            url = "http://134.75.115.137/maddash/grids/36Node+Measurements+-+Example+Delay+Tests+-+Delay/203.250.172."+str(zoneip)+"/"+ip+"/Delay/"
+            url = "http://134.75.115.137/maddash/grids/36Node+Measurements+-+Example+Delay+Tests+-+Delay/"+sys.argv[i+1]+"/"+ip+"/Delay/"
             data2 = transdata(url)
             if data >= data2 and 40-deweight*data > 0 :
                 score = 40-deweight*data
@@ -73,42 +61,39 @@ for j in range(int(neednode)):
                 score = 40-deweight*data2
             else:
                 score = 0
-            print(ip+", 203.250.172."+str(zoneip)+"  Delay :"+str(data))
-            print("203.250.172."+str(zoneip)+", "+ip+"  Delay :"+str(data2)+" , score :"+str(score))
-            delay[str(ip)+"203.250.172."+str(zoneip)] = score
-            delay["203.250.172."+str(zoneip)+str(ip)] = score
+            print(ip+" , "+sys.argv[i+1]+"  Delay :"+str(data))
+            print(sys.argv[i+1]+" , "+ip+"  Delay :"+str(data2)+" , score :"+str(score))
+            delay[ip+","+sys.argv[i+1]] = score
+            delay[sys.argv[i+1]+","+ip] = score
 
     for i in range(nodeinzone):
-        zoneip = 9*(zone-1)+i+1
-        if zoneip not in iplist:
-            url = "http://134.75.115.137/maddash/grids/36Node+Measurements+-+Example+Throughput+Tests+-+Throughput/"+ip+"/203.250.172."+str(zoneip)+"/Throughput/"
+        if sys.argv[i+1] not in iplist:
+            url = "http://134.75.115.137/maddash/grids/36Node+Measurements+-+Example+Throughput+Tests+-+Throughput/"+ip+"/"+sys.argv[i+1]+"/Throughput/"
             data = transdata(url)
-            url = "http://134.75.115.137/maddash/grids/36Node+Measurements+-+Example+Throughput+Tests+-+Throughput/203.250.172."+str(zoneip)+"/"+ip+"/Throughput/"
+            url = "http://134.75.115.137/maddash/grids/36Node+Measurements+-+Example+Throughput+Tests+-+Throughput/"+sys.argv[i+1]+"/"+ip+"/Throughput/"
             data2 = transdata(url)
             if data >= data2 :
                 score = 40*data2*thweight
             elif data < data2 :
                 score = 40*data*thweight
-            print(ip+", 203.250.172."+str(zoneip)+"  Throughput :"+str(data))
-            print("203.250.172."+str(zoneip)+", "+ip+"  Throughput :"+str(data2)+" , score :"+str(score))
-            throughput[str(ip)+"203.250.172."+str(zoneip)] = score
-            throughput["203.250.172."+str(zoneip)+str(ip)] = score
+            print(ip+" , "+sys.argv[i+1]+"  Throughput :"+str(data))
+            print(sys.argv[i+1]+" , "+ip+"  Throughput :"+str(data2)+" , score :"+str(score))
+            throughput[ip+","+sys.argv[i+1]] = score
+            throughput[sys.argv[i+1]+","+ip] = score
 
     for i in range(nodeinzone):
-        zoneip = 9*(zone-1)+i+1
-        if zoneip not in iplist:
-            if "203.250.172."+str(zoneip) in pretotal :
-                total["203.250.172."+str(zoneip)] =  pretotal["203.250.172."+str(zoneip)] + loss[str(ip)+"203.250.172."+str(zoneip)]+throughput[str(ip)+"203.250.172."+str(zoneip)]+delay[str(ip)+"203.250.172."+str(zoneip)]
+        if sys.argv[i+1] not in iplist:
+            if sys.argv[i+1] in pretotal :
+                total[sys.argv[i+1]] =  pretotal[sys.argv[i+1]] + loss[ip+","+sys.argv[i+1]]+throughput[ip+","+sys.argv[i+1]]+delay[ip+","+sys.argv[i+1]]
             else :
-                total["203.250.172."+str(zoneip)] = loss[str(ip)+"203.250.172."+str(zoneip)]+throughput[str(ip)+"203.250.172."+str(zoneip)]+delay[str(ip)+"203.250.172."+str(zoneip)]
+                total[sys.argv[i+1]] = loss[ip+","+str(sys.argv[i+1])]+throughput[ip+","+str(sys.argv[i+1])]+delay[ip+","+str(sys.argv[i+1])]
 
     total2 = sorted(total.items(), key=operator.itemgetter(1), reverse=True)
     pretotal = dict(total2)
     print(total2)
-    print("======================="+str(total2[0][0])+"=========================")
+    print("======================= Node Select : "+str(total2[0][0])+"=========================")
     ip = str(total2[0][0])
-    p=ip.split('.')
-    n = int(p[3])
     selectlist.append(ip)
     total = {}
+    
 print(selectlist)

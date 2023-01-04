@@ -6,7 +6,11 @@ import operator
 
 
 ip = sys.argv[1]
-
+neednode = sys.argv[len(sys.argv)-1]
+#neednode = sys.argv[2]
+print("neednode : " + neednode)
+print(sys.argv)
+print(type(sys.argv))
 print("hello"+ip)
 print(type(ip))
 print(ip[3])
@@ -25,3 +29,9 @@ if int(p[3]) not in a :
 zoneip = 9
 url = "http://134.75.115.137/maddash/grids/36Node+Measurements+-+Example+Loss+Tests+-+Loss/"+ip+"/203.250.172."+str(zoneip)+"/Packet+Loss/"
 print(url)
+
+def add_para(*args):
+    print(args)
+    return sum(args)
+
+add_para(3,4,5,6), add_para(1,2,3,4,5,6,7,8,9,10)
