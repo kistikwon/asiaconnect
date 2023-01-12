@@ -17,7 +17,7 @@ loweight = 100
 deweight = 1
 
 ip = sys.argv[1]
-neednode = sys.argv[len(sys.argv)-1]
+neednode = int(sys.argv[len(sys.argv)-1])-1
 nodeinzone = len(sys.argv)-2
 
 loss = {}

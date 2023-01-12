@@ -5,6 +5,23 @@ import re
 import operator
 
 
+url = 'http://134.75.115.137/maddash/grids/36Node+Measurements+-+Example+Delay+Tests+-+Delay'
+data = requests.get(url)
+binary = data.content
+output = json.loads(binary)
+r = output['grid']
+print(r[1][5])
+k = r[1][5][0]['message']
+regex = re.compile('[^0-9.]')
+print(float(regex.sub('',k)))
+print(type(r))
+print(type(k))
+print(k)
+
+
+
+
+'''
 ip = sys.argv[1]
 neednode = sys.argv[len(sys.argv)-1]
 #neednode = sys.argv[2]
@@ -35,3 +52,4 @@ def add_para(*args):
     return sum(args)
 
 add_para(3,4,5,6), add_para(1,2,3,4,5,6,7,8,9,10)
+'''
