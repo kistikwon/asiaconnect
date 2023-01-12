@@ -22,6 +22,17 @@ print(k)
 
 
 '''
+p=ip.split('.')
+n = int(p[3])
+if n >= 1 and n < 10:
+    zone = 1
+elif n >=10 and n < 19:
+    zone = 2
+elif n >=18 and n < 28:
+    zone = 3
+elif n >= 28 and n < 37:
+    zone = 4
+
 ip = sys.argv[1]
 neednode = sys.argv[len(sys.argv)-1]
 #neednode = sys.argv[2]
