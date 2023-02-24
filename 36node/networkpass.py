@@ -4,7 +4,7 @@ import sys
 import re
 import operator
 
-def networkpass(argv)
+def networkpass(argv):
     thweight = 1
     loweight = 100
     deweight = 1
@@ -116,4 +116,4 @@ def networkpass(argv)
 
     print(selectlist)
 
-return(selectlist)
+    return(selectlist)
