@@ -7,7 +7,7 @@ from networkpass import networkpass
 
 #test = networkpass(sys.argv)
 
-arraytest = ['arraytest', '203.250.172.1', '203.250.172.2', '203.250.172.3', '203.250.172.4', '2']
+arraytest = ['203.250.172.1', '203.250.172.2', '203.250.172.3', '203.250.172.4', '2']
 
 test = networkpass(arraytest)
 

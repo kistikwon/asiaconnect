@@ -6,12 +6,12 @@ import operator
 
 def networkpass(argv):
     thweight = 1
-    loweight = 100
+    loweight = 10
     deweight = 1
 
-    ip = argv[1]
-    neednode = int(argv[len(argv)-1])-1
-    nodeinzone = len(argv)-2
+    ip = argv[0]
+    neednode = int(argv[len(argv)-1])
+    nodeinzone = len(argv)-1
 
     urldelay = 'http://134.75.115.137/maddash/grids/36Node+Measurements+-+Example+Delay+Tests+-+Delay'
     urlloss = 'http://134.75.115.137/maddash/grids/36Node+Measurements+-+Example+Loss+Tests+-+Loss'
@@ -43,7 +43,7 @@ def networkpass(argv):
     selectlist = []
     pretotal = {}
 
-    selectlist.append(ip)
+    #selectlist.append(ip)
 
 
     for j in range(int(neednode)):
@@ -51,8 +51,8 @@ def networkpass(argv):
         p=ip.split('.')
         n = int(p[3])
         for i in range(nodeinzone):
-            if argv[i+1] not in iplist:
-                p2 = argv[i+1].split('.')
+            if argv[i] not in iplist:
+                p2 = argv[i].split('.')
                 n2 = int(p2[3])
                 data = float(regex.sub('',lossoutput[n-1][n2-1][0]['message']))
                 data2 = float(regex.sub('',lossoutput[n2-1][n-1][0]['message']))
@@ -62,14 +62,14 @@ def networkpass(argv):
                     score = 20-data2*loweight
                 else:
                     score = 0
-                print(ip+" , "+argv[i+1]+"  Loss :"+str(data))
-                print(argv[i+1]+" , "+ip+"  Loss :"+str(data2)+" , score :"+str(score))
-                loss[ip+","+argv[i+1]] = score
-                loss[argv[i+1]+","+ip] = score
+                print(ip+" , "+argv[i]+"  Loss :"+str(data))
+                print(argv[i]+" , "+ip+"  Loss :"+str(data2)+" , score :"+str(score))
+                loss[ip+","+argv[i]] = score
+                loss[argv[i]+","+ip] = score
 
         for i in range(nodeinzone):
-            if argv[i+1] not in iplist:
-                p2 = argv[i+1].split('.')
+            if argv[i] not in iplist:
+                p2 = argv[i].split('.')
                 n2 = int(p2[3])
                 data = float(regex.sub('',delayoutput[n-1][n2-1][0]['message']))
                 data2 = float(regex.sub('',delayoutput[n2-1][n-1][0]['message']))
@@ -79,14 +79,14 @@ def networkpass(argv):
                     score = 40-deweight*data2
                 else:
                     score = 0
-                print(ip+" , "+argv[i+1]+"  Delay :"+str(data))
-                print(argv[i+1]+" , "+ip+"  Delay :"+str(data2)+" , score :"+str(score))
-                delay[ip+","+argv[i+1]] = score
-                delay[argv[i+1]+","+ip] = score
+                print(ip+" , "+argv[i]+"  Delay :"+str(data))
+                print(argv[i]+" , "+ip+"  Delay :"+str(data2)+" , score :"+str(score))
+                delay[ip+","+argv[i]] = score
+                delay[argv[i]+","+ip] = score
 
         for i in range(nodeinzone):
-            if argv[i+1] not in iplist:
-                p2 = argv[i+1].split('.')
+            if argv[i] not in iplist:
+                p2 = argv[i].split('.')
                 n2 = int(p2[3])
                 data = float(regex.sub('',throughputoutput[n-1][n2-1][0]['message']))
                 data2 = float(regex.sub('',throughputoutput[n2-1][n-1][0]['message']))
@@ -94,17 +94,17 @@ def networkpass(argv):
                     score = 40*data2*thweight
                 elif data < data2 :
                     score = 40*data*thweight
-                print(ip+" , "+argv[i+1]+"  Throughput :"+str(data))
-                print(argv[i+1]+" , "+ip+"  Throughput :"+str(data2)+" , score :"+str(score))
-                throughput[ip+","+argv[i+1]] = score
-                throughput[argv[i+1]+","+ip] = score
+                print(ip+" , "+argv[i]+"  Throughput :"+str(data))
+                print(argv[i]+" , "+ip+"  Throughput :"+str(data2)+" , score :"+str(score))
+                throughput[ip+","+argv[i]] = score
+                throughput[argv[i]+","+ip] = score
 
         for i in range(nodeinzone):
-            if argv[i+1] not in iplist:
-                if argv[i+1] in pretotal :
-                    total[argv[i+1]] =  pretotal[argv[i+1]] + loss[ip+","+argv[i+1]]+throughput[ip+","+argv[i+1]]+delay[ip+","+argv[i+1]]
+            if argv[i] not in iplist:
+                if argv[i] in pretotal :
+                    total[argv[i]] =  pretotal[argv[i]] + loss[ip+","+argv[i]]+throughput[ip+","+argv[i]]+delay[ip+","+argv[i]]
                 else :
-                    total[argv[i+1]] = loss[ip+","+str(argv[i+1])]+throughput[ip+","+str(argv[i+1])]+delay[ip+","+str(argv[i+1])]
+                    total[argv[i]] = loss[ip+","+str(argv[i])]+throughput[ip+","+str(argv[i])]+delay[ip+","+str(argv[i])]
 
         total2 = sorted(total.items(), key=operator.itemgetter(1), reverse=True)
         pretotal = dict(total2)
